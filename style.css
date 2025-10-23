@@ -22,13 +22,13 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #0d47a1; /* línea azul */
+    border-bottom: 2px solid #00a8ff; /* línea azul eléctrico */
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #0d47a1; /* azul */
+    color: #00a8ff; /* azul eléctrico */
 }
 
 .nav-links {
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #0d47a1; /* azul al pasar el mouse */
+    color: #00a8ff; /* azul eléctrico al pasar el mouse */
 }
 
 /* ===== CONTENEDOR ===== */
@@ -62,7 +62,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #0d47a1; /* azul principal */
+    color: #00a8ff; /* azul eléctrico */
 }
 
 /* ===== SOBRE MÍ ===== */
@@ -72,7 +72,7 @@ h2 {
 
 .about-text h3 {
     margin-top: 1.5rem;
-    color: #0d47a1;
+    color: #00a8ff;
 }
 
 /* ===== GALERÍA DE ARTE 3D ===== */
@@ -86,13 +86,85 @@ h2 {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 2px solid #0d47a1; /* borde azul */
+    border: 2px solid #00a8ff; /* borde azul eléctrico */
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    border-color: #42a5f5; /* azul claro al hover */
+    border-color: #4cdfff; /* azul eléctrico claro al hover */
+}
+
+/* ===== SECCIÓN PROYECTOS DE VIDEOJUEGOS ===== */
+.projects {
+    background-color: #1a1a1a;
+    padding: 4rem 0;
+}
+
+.project-card {
+    background-color: #252525;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 168, 255, 0.2);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #00a8ff;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00a8ff;
+}
+
+.project-role {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #aaa;
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+}
+
+.project-media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.project-media img, .project-media video {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.project-challenges {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.project-challenges h4 {
+    color: #00a8ff;
+    margin-bottom: 0.5rem;
 }
 
 /* ===== CONTACTO ===== */
@@ -114,13 +186,13 @@ h2 {
 }
 
 .contact-content a {
-    color: #42a5f5; /* azul claro */
+    color: #4cdfff; /* azul eléctrico claro */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-content a:hover {
-    color: #0d47a1; /* azul oscuro */
+    color: #00a8ff; /* azul eléctrico */
 }
 
 /* ===== BOTONES ===== */
@@ -129,7 +201,7 @@ h2 {
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #0d47a1; /* azul oscuro */
+    background-color: #00a8ff; /* azul eléctrico */
     color: #fff;
     font-weight: bold;
     transition: background 0.3s;
@@ -137,7 +209,7 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #42a5f5; /* azul claro */
+    background-color: #4cdfff; /* azul eléctrico claro */
 }
 
 /* ===== FOOTER ===== */
@@ -148,7 +220,7 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #aaa;
-    border-top: 2px solid #0d47a1; /* línea azul */
+    border-top: 2px solid #00a8ff; /* línea azul eléctrico */
 }
 
 /* ===== RESPONSIVIDAD ===== */
@@ -157,7 +229,7 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
-    .gallery-grid {
+    .gallery-grid, .project-media {
         grid-template-columns: 1fr;
     }
 }
