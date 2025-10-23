@@ -13,6 +13,7 @@
             <h1 class="logo">Cristian</h1>
             <ul class="nav-links">
                 <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#arte">Arte 3D</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -35,32 +36,72 @@
         </div>
     </section>
 
+    <!-- ===== SECCIÓN PROYECTOS DE VIDEOJUEGOS ===== -->
+    <section id="proyectos" class="section projects">
+        <div class="container">
+            <h2>Proyectos de Videojuegos</h2>
+            
+            <div class="project-card">
+                <img src="assets/proyecto1.jpg" alt="Nexus Chronicles" class="project-thumbnail">
+                <div class="project-info">
+                    <h3 class="project-title">Nexus Chronicles</h3>
+                    <p class="project-role">Diseñador de Nivel 3D y Artista de Entornos</p>
+                    
+                    <div class="project-description">
+                        <p>Nexus Chronicles es un juego de aventuras en tercera persona con elementos de puzzle y exploración. El jugador viaja a través de diferentes dimensiones para restaurar el equilibrio del multiverso.</p>
+                    </div>
+                    
+                    <div class="project-media">
+                        <img src="assets/gameplay1.jpg" alt="Gameplay Nexus Chronicles">
+                        <img src="assets/concept-art1.jpg" alt="Arte Conceptual Nexus Chronicles">
+                        <video controls poster="assets/video-thumbnail.jpg">
+                            <source src="assets/trailer-nexus.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    
+                    <div class="project-challenges">
+                        <h4>Retos y Soluciones</h4>
+                        <p><strong>Reto:</strong> Crear un sistema de transición fluida entre dimensiones con cambios visuales drásticos sin afectar el rendimiento.</p>
+                        <p><strong>Solución:</strong> Desarrollé un sistema de precarga de assets por niveles y optimicé las texturas utilizando técnicas de LOD (Level of Detail). Implementé shaders personalizados en Unity que permitían cambiar la paleta de colores y efectos de post-procesamiento de manera progresiva durante las transiciones.</p>
+                    </div>
+                    
+                    <a href="https://cristian-velasco.itch.io/nexus-chronicles" class="btn" target="_blank">Jugar en itch.io</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== SECCIÓN ARTE 3D ===== -->
     <section id="arte" class="section gallery">
-        <h2>Galería de Arte 3D</h2>
-        <div class="gallery-grid">
-            <img src="assets/arte1.jpg" alt="Arte 3D 1">
-            <img src="assets/arte2.jpg" alt="Arte 3D 2">
-            <img src="assets/arte3.jpg" alt="Arte 3D 3">
-            <img src="assets/arte4.jpg" alt="Arte 3D 4">
+        <div class="container">
+            <h2>Galería de Arte 3D</h2>
+            <div class="gallery-grid">
+                <img src="assets/arte1.jpg" alt="Arte 3D 1">
+                <img src="assets/arte2.jpg" alt="Arte 3D 2">
+                <img src="assets/arte3.jpg" alt="Arte 3D 3">
+                <img src="assets/arte4.jpg" alt="Arte 3D 4">
+            </div>
         </div>
     </section>
 
     <!-- ===== CONTACTO ===== -->
     <section id="contacto" class="section contact">
-    <h2>Contacto</h2>
-    <div class="contact-content">
-        <p>Puedes contactarme a través de mi correo o visitar mis redes profesionales:</p>
-        <ul>
-            <li>Email: <a href="mailto:cristianvelvaz89@gmail.com">cristianvelvaz89@gmail.com</a></li>
-            <li>ArtStation: <a href="https://cristian_velasco.artstation.com/" target="_blank">https://cristian_velasco.artstation.com/</a></li>
-        </ul>
-    </div>
-</section>
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <p>Puedes contactarme a través de mi correo o visitar mis redes profesionales:</p>
+                <ul>
+                    <li>Email: <a href="mailto:cristianvelvaz89@gmail.com">cristianvelvaz89@gmail.com</a></li>
+                    <li>ArtStation: <a href="https://cristian_velasco.artstation.com/" target="_blank">https://cristian_velasco.artstation.com/</a></li>
+                    <li>itch.io: <a href="https://cristian-velasco.itch.io/" target="_blank">https://cristian-velasco.itch.io/</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2025 Cristian Velasco - Portafolio de Artista 3D</p>
     </footer>
 </body>
 </html>
-
