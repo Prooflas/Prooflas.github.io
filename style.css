@@ -1,0 +1,173 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #f0f0f0;           /* Texto claro */
+    line-height: 1.6;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #0d47a1; /* línea azul */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d47a1; /* azul */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0d47a1; /* azul al pasar el mouse */
+}
+
+/* ===== CONTENEDOR ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* ===== SECCIONES ===== */
+.section {
+    padding: 4rem 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0d47a1; /* azul principal */
+}
+
+/* ===== SOBRE MÍ ===== */
+.about-text {
+    text-align: center;
+}
+
+.about-text h3 {
+    margin-top: 1.5rem;
+    color: #0d47a1;
+}
+
+/* ===== GALERÍA DE ARTE 3D ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #0d47a1; /* borde azul */
+    transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    border-color: #42a5f5; /* azul claro al hover */
+}
+
+/* ===== CONTACTO ===== */
+.contact-content {
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-content ul li {
+    margin: 0.5rem 0;
+}
+
+.contact-content a {
+    color: #42a5f5; /* azul claro */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-content a:hover {
+    color: #0d47a1; /* azul oscuro */
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #0d47a1; /* azul oscuro */
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #42a5f5; /* azul claro */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 2px solid #0d47a1; /* línea azul */
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
