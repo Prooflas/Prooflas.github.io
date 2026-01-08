@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Artista 3D</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- ===== MENÚ DE NAVEGACIÓN ===== -->
@@ -14,7 +15,6 @@
             <ul class="nav-links">
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="proyecto-cyberpunk.html" class="new-project-link">Cyberpunk Arena</a></li>
                 <li><a href="#arte">Arte 3D</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -48,110 +48,196 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="assets/avatar.jpg" alt="Retrato de Cristian">
+                    <img src="assets/avatar.jpg" alt="Retrato de Cristian" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SECCIÓN PROYECTOS DE VIDEOJUEGOS ===== -->
+    <!-- ===== SECCIÓN PROYECTOS DE VIDEOJUEGOS CON PESTAÑAS ===== -->
     <section id="proyectos" class="section projects">
         <div class="container">
             <h2>Proyectos de Videojuegos</h2>
             
-            <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <div class="project-preview">
-                        <img src="assets/LIAM1.jpg" alt="Shadows of Liam">
-                        <div class="project-overlay">
-                            <a href="#shadows-of-liam" class="btn-view">Ver Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Shadows of Liam</h3>
-                        <p class="project-role">GAME DESIGNER</p>
-                        <p class="project-excerpt">Terror psicológico ambientado en una realidad distorsionada...</p>
-                        <a href="#shadows-of-liam" class="btn-details">Ver detalles</a>
+            <!-- Pestañas de proyectos -->
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="shadows">Shadows of Liam</button>
+                        <button class="tab-button" data-tab="cyberpunk">Cyberpunk Arena</button>
+                        <button class="tab-button" data-tab="nexus">Nexus Chronicles</button>
                     </div>
                 </div>
                 
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <div class="project-preview">
-                        <img src="assets/cyberpunk-preview.jpg" alt="Cyberpunk Arena">
-                        <div class="project-overlay">
-                            <a href="proyecto-cyberpunk.html" class="btn-view">Ver Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Cyberpunk Arena</h3>
-                        <p class="project-role">ARTISTA 3D / DISEÑADOR DE AMBIENTES</p>
-                        <p class="project-excerpt">Arena de combate futurista en una megaciudad distópica...</p>
-                        <a href="proyecto-cyberpunk.html" class="btn-details">Ver detalles</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SECCIÓN DETALLE DE PROYECTO 1 ===== -->
-    <section id="shadows-of-liam" class="section project-detail">
-        <div class="container">
-            <a href="#proyectos" class="back-link">← Volver a proyectos</a>
-            <div class="project-header">
-                <h2>Shadows of Liam</h2>
-                <p class="project-subtitle">TERROR PSICOLÓGICO | GAME DESIGNER</p>
-            </div>
-            
-            <div class="project-content">
-                <div class="project-description">
-                    <p>Shadows of Liam es un videojuego de terror psicológico en el que el jugador se pone en la piel de Liam, un joven que llega a su casa cansado y al dormir fue secuestrado y despierta atrapado en un lugar desconocido.</p>
+                <!-- Contenido de las pestañas -->
+                <div class="tabs-content">
                     
-                    <h3>Concepto y Diseño</h3>
-                    <p>El juego se centra en la exploración de un espacio surrealista donde la realidad se distorsiona. El jugador debe resolver puzles y descifrar los misterios del lugar mientras enfrenta sus propios miedos.</p>
-                    
-                    <h3>Mi rol en el proyecto</h3>
-                    <ul>
-                        <li>Diseño de niveles y ambientación</li>
-                        <li>Creación de assets 3D y texturizado</li>
-                        <li>Implementación de mecánicas de juego en Unity</li>
-                        <li>Diseño de iluminación y efectos visuales</li>
-                    </ul>
-                </div>
-                
-                <div class="project-media">
-                    <h3>Galería del proyecto</h3>
-                    <div class="media-grid">
-                        <div class="media-item">
-                            <img src="assets/gameplay1.jpg" alt="Gameplay Shadows of Liam">
-                            <p>Gameplay - Exploración de ambientes</p>
+                    <!-- Pestaña 1: Shadows of Liam -->
+                    <div id="shadows-tab" class="tab-content active">
+                        <div class="project-header">
+                            <h3 class="project-title">Shadows of Liam</h3>
+                            <p class="project-role">GAME DESIGNER</p>
                         </div>
-                        <div class="media-item">
-                            <img src="assets/CASA.jpg" alt="Arte Conceptual">
-                            <p>Arte conceptual del entorno principal</p>
+                        
+                        <div class="project-description">
+                            <p>Shadows of Liam es un videojuego de terror psicológico en el que el jugador se pone en la piel de Liam, un joven que llega a su casa cansado y al dormir fue secuestrado y despierta atrapado en un lugar desconocido.</p>
+                            
+                            <h4>Mi rol en el proyecto</h4>
+                            <ul>
+                                <li>Diseño de niveles y ambientación</li>
+                                <li>Creación de assets 3D y texturizado</li>
+                                <li>Implementación de mecánicas de juego en Unity</li>
+                                <li>Diseño de iluminación y efectos visuales</li>
+                            </ul>
                         </div>
-                        <div class="media-item video-item">
-                            <video controls poster="assets/LIAM1.jpg">
-                                <source src="assets/LIAM.mp4" type="video/mp4">
-                                Tu navegador no soporta el elemento de video.
-                            </video>
-                            <p>Trailer del juego</p>
+                        
+                        <div class="project-media">
+                            <h4>Galería del proyecto</h4>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="assets/gameplay1.jpg" alt="Gameplay Shadows of Liam" onerror="this.src='https://placehold.co/600x400/222/eee?text=Gameplay+Shadows+of+Liam'">
+                                    <p>Gameplay - Exploración de ambientes</p>
+                                </div>
+                                <div class="media-item">
+                                    <img src="assets/CASA.jpg" alt="Arte Conceptual" onerror="this.src='https://placehold.co/600x400/222/eee?text=Arte+Conceptual'">
+                                    <p>Arte conceptual del entorno principal</p>
+                                </div>
+                                <div class="media-item video-item">
+                                    <div class="video-placeholder">
+                                        <i class="fas fa-play-circle"></i>
+                                        <p>Vista previa del video</p>
+                                    </div>
+                                    <p>Trailer del juego</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="project-challenges">
-                    <h3>Retos y Soluciones</h3>
-                    <div class="challenge">
-                        <p><strong>Reto:</strong> Crear una sensación constante de miedo y ansiedad sin necesidad de enemigos visibles todo el tiempo.</p>
-                        <p><strong>Solución:</strong> Usar iluminación tenue, sombras dinámicas, sonidos ambientales y efectos visuales sutiles (como niebla y distorsiones). Cada sala tiene un diseño que guía al jugador hacia la sensación de inquietud.</p>
+                        
+                        <div class="project-challenges">
+                            <h4>Retos y Soluciones</h4>
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Crear una sensación constante de miedo y ansiedad sin necesidad de enemigos visibles todo el tiempo.</p>
+                                <p><strong>Solución:</strong> Usar iluminación tenue, sombras dinámicas, sonidos ambientales y efectos visuales sutiles (como niebla y distorsiones). Cada sala tiene un diseño que guía al jugador hacia la sensación de inquietud.</p>
+                            </div>
+                            
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Optimizar el rendimiento para mantener una experiencia fluida en hardware de gama media.</p>
+                                <p><strong>Solución:</strong> Implementación de LODs (Level of Detail) para modelos 3D, texturas optimizadas y uso estratégico de iluminación estática donde fuera posible.</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="challenge">
-                        <p><strong>Reto:</strong> Optimizar el rendimiento para mantener una experiencia fluida en hardware de gama media.</p>
-                        <p><strong>Solución:</strong> Implementación de LODs (Level of Detail) para modelos 3D, texturas optimizadas y uso estratégico de iluminación estática donde fuera posible.</p>
+                    <!-- Pestaña 2: Cyberpunk Arena -->
+                    <div id="cyberpunk-tab" class="tab-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Cyberpunk Arena</h3>
+                            <p class="project-role">ARTISTA 3D / DISEÑADOR DE AMBIENTES</p>
+                            <div class="project-meta">
+                                <span class="meta-item"><i class="fas fa-gamepad"></i> Shooter multijugador</span>
+                                <span class="meta-item"><i class="fas fa-calendar"></i> 2024</span>
+                                <span class="meta-item"><i class="fas fa-clock"></i> 6 meses</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>Cyberpunk Arena es un shooter multijugador por equipos ambientado en el año 2187. Los jugadores compiten en arenas verticales dentro de una megaciudad distópica, utilizando armas futuristas y habilidades cibernéticas.</p>
+                            
+                            <h4>Mi contribución al proyecto</h4>
+                            <ul>
+                                <li><strong>Diseño de ambientes:</strong> Creación de la arena principal "Neo-Tokyo Central" con múltiples niveles de altura</li>
+                                <li><strong>Modelado 3D:</strong> Desarrollo de assets arquitectónicos, vehículos y elementos de escenario</li>
+                                <li><strong>Texturizado:</strong> Uso de Substance Painter para crear materiales PBR con efectos de neón</li>
+                                <li><strong>Iluminación:</strong> Configuración de iluminación dinámica con efectos de neón y hologramas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-media">
+                            <h4>Galería del proyecto</h4>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/1a0033/cc00ff?text=Arena+Neo-Tokyo" alt="Arena Neo-Tokyo">
+                                    <p>Arena principal - Neo-Tokyo Central</p>
+                                </div>
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/003326/00ffcc?text=Modelos+3D" alt="Modelos 3D">
+                                    <p>Modelado de assets futuristas</p>
+                                </div>
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/331a00/ff9900?text=Efectos+Neón" alt="Efectos de neón">
+                                    <p>Efectos de iluminación y neón</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-challenges">
+                            <h4>Retos y Soluciones</h4>
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Crear una sensación de verticalidad y múltiples rutas sin hacer el mapa confuso.</p>
+                                <p><strong>Solución:</strong> Implementé un sistema de color-coding: cada nivel de altura tiene una paleta de colores distintiva. Rutas principales marcadas con neón.</p>
+                            </div>
+                            
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Mantener el rendimiento con miles de luces dinámicas (neón) y efectos.</p>
+                                <p><strong>Solución:</strong> Light baking para iluminación estática y técnicas de instancing para luces de neón. LODs para partículas.</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Pestaña 3: Nexus Chronicles -->
+                    <div id="nexus-tab" class="tab-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Nexus Chronicles</h3>
+                            <p class="project-role">ARTISTA DE PERSONAJES / ANIMADOR</p>
+                            <div class="project-meta">
+                                <span class="meta-item"><i class="fas fa-gamepad"></i> RPG de aventuras</span>
+                                <span class="meta-item"><i class="fas fa-calendar"></i> 2023</span>
+                                <span class="meta-item"><i class="fas fa-clock"></i> 8 meses</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>Nexus Chronicles es un RPG de aventuras en un mundo de fantasía steampunk. Los jugadores exploran un vasto mundo lleno de misterios, resuelven puzles y se enfrentan a enemigos mecánicos en combates por turnos.</p>
+                            
+                            <h4>Mi contribución al proyecto</h4>
+                            <ul>
+                                <li><strong>Diseño de personajes:</strong> Creación del protagonista y NPCs principales con estilo steampunk</li>
+                                <li><strong>Modelado y rigging:</strong> Desarrollo de modelos 3D y sistemas de esqueleto para animación</li>
+                                <li><strong>Animación:</strong> Animaciones de combate, diálogo y movimientos básicos</li>
+                                <li><strong>Diseño de criaturas:</strong> Creación de enemigos mecánicos y bestias fantásticas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-media">
+                            <h4>Galería del proyecto</h4>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/1a331a/66ff66?text=Personaje+Principal" alt="Personaje principal">
+                                    <p>Protagonista - Diseño steampunk</p>
+                                </div>
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/33331a/ffff66?text=Criatura+Mecánica" alt="Criatura mecánica">
+                                    <p>Enemigo mecánico - Guardián del Nexo</p>
+                                </div>
+                                <div class="media-item">
+                                    <img src="https://placehold.co/600x400/331a33/ff66ff?text=Ambiente+Steampunk" alt="Ambiente steampunk">
+                                    <p>Ciudad steampunk - Ambiente principal</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-challenges">
+                            <h4>Retos y Soluciones</h4>
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Crear un sistema de animación fluido para combates por turnos con transiciones naturales.</p>
+                                <p><strong>Solución:</strong> Implementé un sistema de animación basado en estados con blend trees para transiciones suaves entre movimientos.</p>
+                            </div>
+                            
+                            <div class="challenge">
+                                <p><strong>Reto:</strong> Diseñar personajes con elementos steampunk que fueran creíbles y visualmente atractivos.</p>
+                                <p><strong>Solución:</strong> Investigación de tecnología victoriana y mecánica real para crear diseños que combinaran fantasía con plausibilidad tecnológica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -163,25 +249,25 @@
             <h2>Galería de Arte 3D</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/arte1.jpg" alt="Arte 3D 1">
+                    <img src="assets/arte1.jpg" alt="Arte 3D 1" onerror="this.src='https://placehold.co/600x400/222/eee?text=Modelado+de+Personaje'">
                     <div class="gallery-overlay">
                         <p>Modelado de personaje - Shadows of Liam</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/arte2.jpg" alt="Arte 3D 2">
+                    <img src="assets/arte2.jpg" alt="Arte 3D 2" onerror="this.src='https://placehold.co/600x400/222/eee?text=Ambiente+Urbano'">
                     <div class="gallery-overlay">
                         <p>Ambiente urbano - Proyecto personal</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/arte3.jpg" alt="Arte 3D 3">
+                    <img src="assets/arte3.jpg" alt="Arte 3D 3" onerror="this.src='https://placehold.co/600x400/222/eee?text=Vehículo+Futurista'">
                     <div class="gallery-overlay">
                         <p>Diseño de vehículo futurista</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/arte4.jpg" alt="Arte 3D 4">
+                    <img src="assets/arte4.jpg" alt="Arte 3D 4" onerror="this.src='https://placehold.co/600x400/222/eee?text=Arquitectura+Orgánica'">
                     <div class="gallery-overlay">
                         <p>Arquitectura orgánica - Concept art</p>
                     </div>
@@ -195,19 +281,28 @@
         <div class="container">
             <h2>Contacto</h2>
             <div class="contact-content">
-                <p>¿Interesado en colaborar en un proyecto o simplemente quieres hablar sobre arte 3D y videojuegos? ¡Contáctame!</p>
+                <p>Puedes contactarme a través de mi correo o visitar mis redes profesionales:</p>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:cristianvelvaz89@gmail.com">cristianvelvaz89@gmail.com</a>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:cristianvelvaz89@gmail.com">cristianvelvaz89@gmail.com</a>
+                        </div>
                     </div>
                     <div class="contact-item">
-                        <h3>ArtStation</h3>
-                        <a href="https://cristian_velasco.artstation.com/" target="_blank">cristian_velasco.artstation.com</a>
+                        <i class="fas fa-palette"></i>
+                        <div>
+                            <h3>ArtStation</h3>
+                            <a href="https://cristian_velasco.artstation.com/" target="_blank">cristian_velasco.artstation.com</a>
+                        </div>
                     </div>
                     <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <a href="#" target="_blank">linkedin.com/in/cristianvelasco</a>
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="#" target="_blank">linkedin.com/in/cristianvelasco</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -218,6 +313,65 @@
         <p>© 2025 Cristian Velasco - Portafolio de Artista 3D</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Sistema de pestañas
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remover clase active de todos los botones y contenidos
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado
+                    button.classList.add('active');
+                    
+                    // Mostrar el contenido correspondiente
+                    const tabId = button.getAttribute('data-tab');
+                    const tabContent = document.getElementById(tabId + '-tab');
+                    if (tabContent) {
+                        tabContent.classList.add('active');
+                    }
+                });
+            });
+            
+            // Menú responsive
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+            }
+            
+            // Smooth scroll para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Cerrar menú móvil si está abierto
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            menuToggle.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
